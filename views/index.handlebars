@@ -1,38 +1,36 @@
-<h1>Burgers!</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <h2 class="text-primary mt-5">Ready to Eat!</h2>
+            {{#each burgers}}
+            {{#unless this.devoured}}
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    {{burger_name}}
+                    <a href="#" class="badge badge-warning badge-pill devour" data-id="{{id}}">Devour it!</a>
+                </li>
+            </ul>
+            {{/unless}}
+            {{/each}}
+        </div>
 
-<h2>These burgers are ready to eat!</h2>
+        <div class="col-4">
+            <img src="/assets/img/burger.gif"
+                alt="cheeseburger" class="img-fluid pt-5">
+        </div>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
+        <div class="col-4">
+            <h2 class="text-primary mt-5">You Devoured These!</h2>
+            {{#each burgers}}
+            {{#if devoured}}
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    {{burger_name}}
+                </li>
+            </ul>
+            {{/if}}
+            {{/each}}
+        </div>
+    </div>
 
-<h2>You ate these burgers!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="burg">Burger Name:</label>
-    <input type="text" id="burg" name="name">
-  </div>
-
-  <div class="form-group">
-    <label for="ate">Devoured?</label><br>
-    <input type="radio" name="devoured" value="1" checked> Devoured!<br>
-    <input type="radio" name="devoured" value="0"> Ready to eat!
-  </div>
-
-  <button type="submit">Add Burger</button>
-</form>
+</div> {{!-- end container --}}

@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-		<link rel="stylesheet" href="/assets/css/burger_style.css" type="text/css" />
-		<title>Eat Da Burger!</title>
-		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="/controllers/burgers_controller.js"></script>
-	</head>
-	<body>
-		{{{ body }}}
-	</body>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/assets/css/burger_style.css" type="text/css">
+    <title>Burger App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/superhero/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/assets/js/burgers_app.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Build a Burg Workshop</a>
+        <form class="form-inline my-2 my-lg-0 create-form">
+            <input class="form-control mr-sm-2" name="name" id="newBurger" type="text" placeholder="Burger to Add"
+                required>
+            <button class="btn btn-warning my-2 my-sm-0 btn-add" type="submit">Add Burger</button>
+        </form>
+        </div>
+    </nav>
+    {{{ body }}}
+
+</body>
+
 </html>
