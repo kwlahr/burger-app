@@ -24,6 +24,14 @@ router.put('/api/burgers/:id', function (req, res) {
     burger.update(condition, function (result) {
         res.status(200).end();
     })
-})
+});
+
+router.delete('/api/burgers/:id', function (req, res) {
+    let condition = req.params.id;
+
+    burger.delete(condition, function (result) {
+        res.status(200).end();
+    })
+});
 
 module.exports = router;

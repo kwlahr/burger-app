@@ -32,4 +32,18 @@ $(function () {
             location.reload();
         })
     })
+
+    $('.delete').on('click', function (event) {
+        let id = $(this).data('id');
+        console.log(id)
+
+        $.ajax('/api/burgers/' + id, {
+            type: 'DELETE',
+            data: {
+                burgerid: id
+            }
+        }).then(function () {
+            location.reload();
+        })
+    })
 })
