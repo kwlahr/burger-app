@@ -27,7 +27,7 @@ MVC model. "models" and "db" folders function as the backend connected to a MySQ
 
 - Open server in terminal and run {node server}
 - Navigate to database in MySQL workbench created via JAWSDB, copy and paste schema file and seeds file into workbench and run
-- Navigate to "https://localhost:3306" in your browser
+- Navigate to "https://localhost:8080" in your browser
 
 ## Demo
 
